@@ -3,17 +3,19 @@ public class Automovel extends Produto {
     private String modelo;
     private int ano;
 
-    public String getMarca() {
-        return marca;
+    public Automovel(int idProduto, double preco, String marca, String modelo, int ano) {
+        super(idProduto, preco);
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
     }
 
-    public String getModelo() {
-        return modelo;
+    public void imprimeDescricao() {
+        System.out.println(toString());
     }
 
-    public int getAno() {
-        return ano;
+    @Override
+    public String toString() {
+        return super.toString() + ", Marca: " + marca + ", Modelo: " + modelo + ", Ano: " + ano;
     }
-
-    
 }
